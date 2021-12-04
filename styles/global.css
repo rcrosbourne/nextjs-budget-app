@@ -1,0 +1,56 @@
+/* @Vtailwind base;
+
+@tailwind components;
+@tailwind utilities; */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
+}
+@layer utilities {
+  @variants responsive {
+    /* Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+}
+.donutchart-track {
+  fill: transparent;
+  stroke: hsla(248, 21%, 28%, 0.883);
+  stroke-width: 2;
+}
+.donutchart-indicator {
+  fill: transparent;
+  stroke: #cd4ff7;
+  stroke-width: 2;
+  stroke-dasharray: 0 10000;
+  transition: stroke-dasharray 0.3s ease;
+}
+
+.donutchart {
+  margin: 0 auto;
+  border-radius: 50%;
+  display: block;
+}
+
+.donutchart-text {
+  font-family: "Poppins";
+  fill: #607580;
+}
+.donutchart-text-val {
+  font-size: 22px;
+}
+.donutchart-text-percent {
+  font-size: 14px;
+}
+.donutchart-text-label {
+  font-size: 9px;
+}
